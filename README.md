@@ -48,6 +48,10 @@ The following updates were made to integrate the BC model into the Lerobots code
     └── make_figures.py                    # helper script to make evaluation plots
 ```
 
+### Slides for Demo
+We also include slides from the demo of our analysis and findings. These include some more details on the methods as well as our findings.
+[lr_demo.pptx](https://github.com/user-attachments/files/20092705/lr_demo.pptx)
+
 ## Installation
 We include a brief installation guide here, adapted from [Lerobots](https://github.com/huggingface/lerobot). For full details please visit the main page of their github directly.
 Download source code:
