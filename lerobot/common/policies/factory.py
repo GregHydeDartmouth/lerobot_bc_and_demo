@@ -60,6 +60,10 @@ def get_policy_class(name: str) -> PreTrainedPolicy:
         from lerobot.common.policies.pi0fast.modeling_pi0fast import PI0FASTPolicy
 
         return PI0FASTPolicy
+    elif name == "bc":
+        from lerobot.common.policies.bc.modeling_bc import BCPolicy
+
+        return BCPolicy
     else:
         raise NotImplementedError(f"Policy with name {name} is not implemented.")
 
@@ -77,6 +81,8 @@ def make_policy_config(policy_type: str, **kwargs) -> PreTrainedConfig:
         return PI0Config(**kwargs)
     elif policy_type == "pi0fast":
         return PI0FASTConfig(**kwargs)
+    elif policy_type == "bc":
+        return BCConfig(**kwargs)
     else:
         raise ValueError(f"Policy type '{policy_type}' is not available.")
 
