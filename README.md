@@ -1,6 +1,6 @@
 ## Introduction
 
-This repository is a fork of the [Lerobots GitHub project](https://github.com/huggingface/lerobot), introducing a standard Behavioral Cloning (BC) benchmark model. The goal is to provide a simple and consistent baseline for comparing against state-of-the-art methods already implemented in Lerobots.
+This repository is a fork of the [Lerobot GitHub project](https://github.com/huggingface/lerobot), introducing a standard Behavioral Cloning (BC) benchmark model. The goal is to provide a simple and consistent baseline for comparing against state-of-the-art methods already implemented in Lerobot.
 
 ### Model Architecture
 
@@ -12,8 +12,8 @@ The BC model adopts the same feature extractor backend as the Diffusion Policy (
 - `t`: current time step  
 - `n`: historical lookback window  
 - `I[t−n:t]`: sequence of RGB camera images over the lookback window  
-- `o[t−n:t]`: sequence of robot observations (e.g., joint positions)  
-- `a[t−n:t+k+n]`: predicted sequence of actions over a future horizon `k`
+- `o[t−n:t]`: sequence of robot observations (e.g., joint positions) over the lookback window
+- `a[t−n:t+k+n]`: predicted sequence of actions over a horizon `k` (starting from t-n to stabilize).
 
 ### Training Objective
 
